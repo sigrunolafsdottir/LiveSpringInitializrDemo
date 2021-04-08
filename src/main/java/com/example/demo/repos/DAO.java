@@ -3,6 +3,7 @@ package com.example.demo.repos;
 import com.example.demo.models.Book;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class DAO {
@@ -15,7 +16,15 @@ public class DAO {
         Book b5 = new Book(5, "t5", "a5");
         Book b6 = new Book(6, "t6", "a6");
 
-        return Arrays.asList(b1, b2, b3, b4, b5, b6);
+        List<Book> lista = new LinkedList<>();
+        lista.add(b1);
+        lista.add(b2);
+        lista.add(b3);
+        lista.add(b4);
+        lista.add(b5);
+        lista.add(b6);
+
+        return lista;
 
     }
 }
