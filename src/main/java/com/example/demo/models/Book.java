@@ -2,7 +2,7 @@ package com.example.demo.models;
 
 public class Book {
 
-    //kommentar i demobranch
+    //kommentar i demobranch making conflict
 
     protected int id;
     protected String title;
