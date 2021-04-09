@@ -4,9 +4,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.models.Book;
 import com.example.demo.repos.DAO;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -46,6 +44,12 @@ public class BookController {
 
         }
         return "Boken med id "+id+"kunde inte tas bort";
+    }
+
+    @PostMapping("/book/add")
+    public String addBook(@RequestBody Book b){
+        mybooks.add(b);
+        return "book added";
     }
 
 
