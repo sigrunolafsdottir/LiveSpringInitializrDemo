@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>My library</h2>
+
+<div class="allCapitals" th:unless="${#lists.isEmpty(allBooks)}">
+    <table>
+        <tbody>
+        <tr th:each="book : ${allBooks}">
+            <td th:text="${book.getId()}"></td>
+            <td th:text="${book.getTitle()}"></td>
+            <td th:text="${book.getAuthor()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

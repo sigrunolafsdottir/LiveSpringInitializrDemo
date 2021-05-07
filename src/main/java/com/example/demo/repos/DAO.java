@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DAO {
 
-    public List<Book> getAllBooks(){
+    public List<Book> getAllBooks() {
         Book b1 = new Book(1, "t1", "a1");
         Book b2 = new Book(2, "t2", "a2");
         Book b3 = new Book(3, "t3", "a3");

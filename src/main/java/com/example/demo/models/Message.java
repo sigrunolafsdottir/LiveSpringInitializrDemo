@@ -5,11 +5,12 @@ public class Message {
     protected boolean status;
     protected String mess;
 
-    public Message(){}
+    public Message() {
+    }
 
-    public Message (boolean status, String mess){
+    public Message(boolean status, String mess) {
         this.status = status;
-        this.mess=mess;
+        this.mess = mess;
     }
 
     public boolean isStatus() {

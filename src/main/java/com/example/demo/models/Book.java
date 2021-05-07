@@ -2,19 +2,16 @@ package com.example.demo.models;
 
 public class Book {
 
-
-    //cleaning up conflict
-
-
     protected int id;
     protected String title;
     protected String author;
 
-    public Book(){}
+    public Book() {
+    }
 
-    public Book(int id, String title, String author){
+    public Book(int id, String title, String author) {
         this.id = id;
-        this.author=author;
+        this.author = author;
         this.title = title;
     }
 

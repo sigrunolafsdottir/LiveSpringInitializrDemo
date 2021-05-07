@@ -12,10 +12,14 @@ import java.util.Optional;
 @RestController
 public class HelloWorldController {
 
+    /*
     @RequestMapping("/")
     public String index() {
         return "Hello World";
     }
+*/
+
+
 
     @RequestMapping("/a")
     public String index2() {
@@ -23,15 +27,15 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/hej")
-    public String hej(@RequestParam (required = false) String name) {
+    public String hej(@RequestParam(required = false) String name) {
         if (name == null) return "Hello World";
         return "Hello " + name;
     }
 
     @RequestMapping("/hej2")
-    public String hej2(@RequestParam (defaultValue = "Sigrun") String firstname,
-                       @RequestParam (defaultValue = "Olafsdottir") String lastname) {
-        return "Hello " + firstname+ " "+lastname;
+    public String hej2(@RequestParam(defaultValue = "Sigrun") String firstname,
+                       @RequestParam(defaultValue = "Olafsdottir") String lastname) {
+        return "Hello " + firstname + " " + lastname;
     }
 
     //anropas: http://localhost:8080/hej3?names=sigrun,soley,olafsdottir
@@ -55,8 +59,8 @@ public class HelloWorldController {
     }
 
     //man skulle kunna tro att detta skulle göra name optional, men det funkar tyvärr inte
-    @RequestMapping(value= {"/hejPathParam2" , "/hejPathParam2/{name}"})
-    public String hejPathParam2(@PathVariable(required=false)  String name) {
+    @RequestMapping(value = {"/hejPathParam2", "/hejPathParam2/{name}"})
+    public String hejPathParam2(@PathVariable(required = false) String name) {
         if (name == null) return "Hello World";
         return "Hello " + name;
     }
@@ -70,17 +74,14 @@ public class HelloWorldController {
     }
 
 
-
-
-
     //man skulle kunna tro att detta skulle göra name optional, men det funkar tyvärr inte
-    @RequestMapping(value= {"/hejPathParam3" , "/hejPathParam3/{name}"})
+    @RequestMapping(value = {"/hejPathParam3", "/hejPathParam3/{name}"})
     public String hejPathParam3(@PathVariable Optional<String> name) {
         if (name.isEmpty()) return "Hello World";
         return "Hello " + name.get();
     }
 
-    @RequestMapping(value= "/hejhtml")
+    @RequestMapping(value = "/hejhtml")
     public String hejhtml() {
         return "<html><head></head><body>hej på er</body></html>";
     }
